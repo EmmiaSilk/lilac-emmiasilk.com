@@ -53,21 +53,15 @@ footer p {
   opacity: 0.5;
 }
 .header-icon-flower {
-  background-image: url("/img/Pink-Flower.png");
-  display: block;
+  position: absolute;
   width: 80%;
   height: 80%;
   top: 10%;
   left: 10%;
-  position: absolute;
+  background-image: url("/img/Pink-Flower.png");
   background-size: 100%;
 }
-.header-icon-flower:hover {
-  animation-play-state: running;
-}
-body {
-  overflow: hidden;
-}
+
 label {
   font-weight: bold;
 }
