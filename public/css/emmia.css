@@ -84,10 +84,35 @@ label {
   margin: auto;
 }
 #content h1 {
-  text-align: center;
+  text-align: left;
+  border-bottom: 1px solid lightgray;
 }
 
 textarea {
   width: 100%;
   min-height: 6em;
+}
+
+#comments {
+  margin-bottom: 1em;
+}
+.user-comment {
+  border: 0px solid gray;
+  border-width: 1px 1px 0px 1px;
+}
+.user-comment>.tagline {
+  background-color: lightgray;
+}
+.user-comment .commenter-name {
+  font-weight: bold;
+}
+.user-comment>p {
+  margin-bottom: 0;
+  padding: 0 0.5em;
+}
+.user-comment:last-child {
+  border-bottom-width: 1px;
+}
+.comment-options {
+  float: right;
 }
