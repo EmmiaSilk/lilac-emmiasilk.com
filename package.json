@@ -1,5 +1,13 @@
 {
   "name": "lilac",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "source-map": "^0.7.2",
+    "webpack": "^3.1.0",
+    "webpack-cli": "^2.1.3"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
+  }
 }
