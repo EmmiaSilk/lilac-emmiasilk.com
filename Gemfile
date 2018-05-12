@@ -30,6 +30,8 @@ gem 'webpacker', '~> 3.5'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 
+gem 'redcarpet'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
