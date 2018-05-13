@@ -8,6 +8,6 @@
 // layout file, like app/views/layouts/application.html.erb
 
 // Stylesheets
-import '../../assets/stylesheets/application';
+import 'stylesheets/application';
 // Application scripts
-import '../../assets/javascripts/application';
+import 'javascripts/application';

@@ -1,3 +1,36 @@
-@import "articles";
-@import "comments";
-@import "welcome";
+// Color theme
+@import "defaults/color-defaults";
+@import "themes/lilac";
+
+// Bootstrap core
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Optional features
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+
+// App styles
+@import "lilac/articles";
+@import "lilac/comments";
+@import "lilac/welcome";
+@import "lilac/layout";
+
+
+label {
+  font-weight: bold;
+}
+.field_with_errors {
+  color: darkred;
+}
+
+
+textarea {
+  width: 100%;
+  min-height: 6em;
+}

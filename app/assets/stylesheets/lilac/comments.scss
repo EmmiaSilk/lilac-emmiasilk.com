@@ -1,0 +1,30 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Comments Module
+#comments {
+  margin-bottom: 1em;
+}
+
+// Individual user comments
+.user-comment {
+  border: 0px solid $color-decor-2;
+  border-width: 1px 1px 0px 1px;
+}
+.user-comment>.tagline {
+  background-color: $color-decor-1;
+}
+.user-comment .commenter-name {
+  font-weight: bold;
+}
+.user-comment>p {
+  margin-bottom: 0;
+  padding: 0 0.5em;
+}
+.user-comment:last-child {
+  border-bottom-width: 1px;
+}
+.user-comment .comment-options {
+  float: right;
+}
