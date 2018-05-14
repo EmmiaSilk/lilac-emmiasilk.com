@@ -16,23 +16,12 @@ module ArticlesHelper
     no_intra_emphasis: true,
   }
 
-  def markdown_article(text, header_level: 1)
+  def markdown(text, header_level: 1, allow_headers: false)
     render_options = {
       header_level: header_level, # The article name header is #h1
+      allow_headers: allow_headers,
     }
     extensions = @@redcarpet_extensions
-
-    renderer = LilacRender.new(@@redcarpet_options.merge(render_options) )
-    markdown = Redcarpet::Markdown.new(renderer, @@redcarpet_extensions)
-
-    markdown.render(text).html_safe()
-  end
-
-  def markdown_comment(text, header_level: 1)
-    render_options = {
-      disable_headers: true,
-      header_level: header_level, # The "Comments" header is #h2
-    }
 
     renderer = LilacRender.new(@@redcarpet_options.merge(render_options) )
     markdown = Redcarpet::Markdown.new(renderer, @@redcarpet_extensions)

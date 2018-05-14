@@ -1,0 +1,24 @@
+<%# Comment renderer %>
+<div class="user-comment" id="<%= anchor_id(comment) %>">
+  <%# Tagline %>
+  <p class="tagline">
+    <span class="commenter-name">
+      <%= comment.commenter %>
+    </span>
+    posted
+    <time title="<%= comment.created_at %>"
+      datetime="<%= comment.created_at %>"
+      class="live-timestamp">
+      <%= time_ago_in_words(comment.created_at) %> ago
+    </time>
+
+    <span class="comment-options">
+      <%= link_to 'Link', article_comment_path(comment.article, comment) %>
+      <%= link_to 'Delete', [comment.article, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+    </span>
+  </p>
+  <%# Comment body %>
+  <p>
+    <%= markdown(comment.body, header_level: 3) %>
+  </p>
+</div>

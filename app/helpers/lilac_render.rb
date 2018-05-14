@@ -9,11 +9,11 @@ class LilacRender < Redcarpet::Render::HTML
   def header(text, level)
     realLevel = level + @options[:header_level] - 1
 
-    if (realLevel > 6 || @options[:disable_headers])
+    if (realLevel <= 6 && @options[:allow_headers])
+      return "<h#{realLevel}>#{text}</h#{realLevel}>"
+    else
       hashes = "#"*level
       return "<p>#{hashes} #{text}<p>"
-    else
-      return "<h#{realLevel}>#{text}</h#{realLevel}>"
     end
   end
 end

@@ -1,56 +1,25 @@
-<%# TODO: Automatically select next and previous articles %>
+<!-- Blog post -->
 <article>
   <h1><%= @article.title %></h1>
-
   <p>
-    <%= markdown_article(@article.text, header_level: 2) %>
+    <%= markdown(@article.text, header_level: 2, allow_headers: true) %>
   </p>
 </article>
 
 <%= render 'article_nav' %>
 
-<!-- User comments list -->
 <hr>
+
+<!-- User comments list -->
 <div id="comments">
   <h2>Comments</h2>
   <% @article.comments.each do |comment| %>
-    <div class="user-comment" id="<%= anchor_id(comment) %>">
-      <p class="tagline">
-        <span class="commenter-name">
-          <%= comment.commenter %>
-        </span>
-        posted
-        <time title="<%= comment.created_at %>"
-          datetime="<%= comment.created_at %>"
-          class="live-timestamp">
-          <%= time_ago_in_words(comment.created_at) %> ago
-        </time>
-        <span class="comment-options">
-          <%= link_to 'Link', article_comment_path(comment.article, comment) %>
-          <%= link_to 'Delete', [comment.article, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
-        </span>
-      </p>
-      <p>
-        <%= markdown_comment(comment.body, header_level: 3) %>
-      </p>
-    </div>
+    <%= render partial: 'comments/comment', object: comment %>
   <% end %>
 </div>
 
+
 <!-- Fields for adding comments -->
-<h2>Add a comment</h2>
-<%= form_with(model: [@article, @article.comments.build], local: true) do |form| %>
-  <p>
-    <%= form.label :commenter %> <br>
-    <%= form.text_field :commenter %>
-  </p>
-
-  <p>
-    <%= form.label :body %> <br>
-    <%= form.text_area :body %>
-  </p>
-
-  <%= form.submit "Post Comment" %>
-<% end %>
+<%= render 'comments/form' %>
 
 <%= render 'article_nav' %>
