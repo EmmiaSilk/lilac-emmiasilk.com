@@ -3,13 +3,13 @@
   <h1><%= @article.title %></h1>
 
   <p>
-    <%= markdown(@article.text) %>
+    <%= markdown_article(@article.text, header_level: 2) %>
   </p>
 </article>
 
 <%= render 'article_nav' %>
 
-<!-- TODO: List comments -->
+<!-- User comments list -->
 <hr>
 <div id="comments">
   <h2>Comments</h2>
@@ -31,7 +31,7 @@
         </span>
       </p>
       <p>
-        <%= comment.body %>
+        <%= markdown_comment(comment.body, header_level: 3) %>
       </p>
     </div>
   <% end %>

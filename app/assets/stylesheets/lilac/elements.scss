@@ -1,0 +1,10 @@
+// Place everything relating to individual elements here.
+
+// Code blocks should preserve whitespace
+code, pre, kdb {
+  white-space: pre-wrap;
+}
+// Fixes an issue in the markdown renderer where it adds extra <br> elements.
+code br, pre br, kbd br {
+  display: none;
+}

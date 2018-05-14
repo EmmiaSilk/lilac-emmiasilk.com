@@ -16,10 +16,11 @@
 @import "~bootstrap/scss/tables";
 
 // App styles
+@import "lilac/elements";
+@import "lilac/layout";
 @import "lilac/articles";
 @import "lilac/comments";
 @import "lilac/welcome";
-@import "lilac/layout";
 
 
 label {
