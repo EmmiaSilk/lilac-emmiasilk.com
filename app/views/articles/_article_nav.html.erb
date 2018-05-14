@@ -1,10 +1,10 @@
 <table class="table article-nav">
   <tr>
-    <td> <%= link_to 'Back'%> </td>
+    <td> <%= link_to 'Prev', article_path(@article.previous_article) %> </td>
     <td> <%= link_to 'Edit', edit_article_path(@article) %> </td>
     <td> <%= link_to 'More', articles_path %> </td>
     <td> <%= link_to 'Delete', article_path(@article), method: :delete,
             data: { confirm: 'Are you sure?' } %> </td>
-    <td> <%= link_to 'Next' %> </td>
+    <td> <%= link_to 'Next', article_path(@article.next_article) %> </td>
   </tr>
 </table>
