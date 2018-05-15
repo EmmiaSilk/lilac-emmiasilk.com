@@ -22,6 +22,7 @@ class ArticlesController < ApplicationController
   # Send new article info to database
   def create
     @article = Article.new(article_params)
+    @article.author = current_user
 
     if @article.save
       redirect_to @article
