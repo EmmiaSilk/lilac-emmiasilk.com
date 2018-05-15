@@ -1,0 +1,5 @@
+# These are just test users for the dev and test environment until I have it
+# properly set up.
+email: user@example.com
+username: user_test
+password: testpass
