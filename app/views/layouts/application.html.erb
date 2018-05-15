@@ -26,7 +26,13 @@
 
   <body>
     <%= render( partial: 'header') %>
-    <div id="content"> <%= yield %> </div>
+    <div id="content">
+      <div id="alert-container">
+        <div class="alert notice alert-info"><%= notice %></div>
+        <div class="alert alert-warning"><%= alert %></div>
+      </div>
+      <%= yield %>
+    </div>
     <%= render( partial: 'footer') %>
   </body>
 </html>
