@@ -27,10 +27,7 @@
   <body>
     <%= render( partial: 'header') %>
     <div id="content">
-      <div id="alert-container">
-        <div class="alert notice alert-info"><%= notice %></div>
-        <div class="alert alert-warning"><%= alert %></div>
-      </div>
+      <%= render( partial: 'flash_alerts') %>
       <%= yield %>
     </div>
     <%= render( partial: 'footer') %>
