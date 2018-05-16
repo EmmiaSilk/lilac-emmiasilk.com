@@ -3,6 +3,15 @@ class User < ApplicationRecord
   has_many :posts
   has_many :comments
 
+  # All valid roles.
+  # Do not change the integer values, or it will break the database.
+  # When removing a role, comment it out so the id doesn't get reused.
+  enum role: {
+    user:    0x00,
+    admin:   0x01,
+    poster:  0x02,
+  }
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
