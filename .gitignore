@@ -11,6 +11,9 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+# Ignore seed data contaning potentially sensitive data
+/db/seed_data/default_users.yml
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
