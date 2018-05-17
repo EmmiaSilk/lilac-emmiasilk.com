@@ -37,4 +37,8 @@ class Article < ApplicationRecord
   def can_user_delete?(user)
     return user == author || user.poster? || user.admin?
   end
+  # Comment permissions
+  def can_user_add_comment?(user)
+    return true;
+  end
 end

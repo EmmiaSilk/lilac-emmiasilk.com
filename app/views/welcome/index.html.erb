@@ -8,6 +8,10 @@
   <%= link_to 'Temporary tutorial blog thingy', controller: 'articles' %>
 </p>
 
+<% if user_signed_in? %>
+  <p> Logged in as <%= current_user.username %>. You are a <%= current_user.role %>. </p>
+<% end %>
+
 <ul>
   <% if user_signed_in? %>
   <li> <%= link_to('Logout', destroy_user_session_path, method: :delete) %> </li>
