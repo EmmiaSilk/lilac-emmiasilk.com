@@ -26,7 +26,10 @@
 
   <body>
     <%= render( partial: 'header') %>
-    <div id="content"> <%= yield %> </div>
+    <div id="content">
+      <%= render( partial: 'flash_alerts') %>
+      <%= yield %>
+    </div>
     <%= render( partial: 'footer') %>
   </body>
 </html>

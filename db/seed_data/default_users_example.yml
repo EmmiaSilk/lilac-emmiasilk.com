@@ -1,0 +1,25 @@
+---
+# This file is an example dataset to copy into `default_users.yml`.
+# Change the passwords and emails of all these users.
+# Change the username of the site owner.
+
+# Admin account: Use for administrative purposes
+- !ruby/object:SeedUser
+  username: "Admin"
+  email: "admin@example.com"
+  password: "" ## Password
+  role: "admin"
+
+# Site Owner: Your account for doing bloggy stuff
+- !ruby/object:SeedUser
+  username: "Your_Name"
+  email: "you@example.com"
+  password: "" ## Password
+  role: "poster"
+
+# Test user: Use for testing features
+- !ruby/object:SeedUser
+  username: "Test_User"
+  email: "test@example.com"
+  password: "" ## Password
+  role: "user"

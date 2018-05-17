@@ -20,6 +20,15 @@
 
 
 <!-- Fields for adding comments -->
-<%= render 'comments/form' %>
+<% if user_signed_in? && @article.can_user_add_comment?(current_user) %>
+  <%= render 'comments/form' %>
+<% else %>
+  <p class="text-center">
+    <%= link_to('Log in', new_user_session_path)  %>
+    or
+    <%= link_to('register', new_user_registration_path)  %>
+    to post a comment.
+  </p>
+<% end %>
 
 <%= render 'article_nav' %>

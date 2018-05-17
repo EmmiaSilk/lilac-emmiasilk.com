@@ -1,4 +1,5 @@
 class Article < ApplicationRecord
+  belongs_to :author, class_name: "User"
   has_many :comments, dependent: :destroy
   validates :title, presence: true, length: {minimum: 5}
 
@@ -24,5 +25,20 @@ class Article < ApplicationRecord
     else
       return self
     end
+  end
+
+  # Article permission policies
+  def self.can_user_create?(user)
+    return user.poster?
+  end
+  def can_user_edit?(user)
+    return user == author || user.admin?
+  end
+  def can_user_delete?(user)
+    return user == author || user.poster? || user.admin?
+  end
+  # Comment permissions
+  def can_user_add_comment?(user)
+    return true;
   end
 end

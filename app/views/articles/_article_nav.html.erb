@@ -1,10 +1,19 @@
 <table class="table article-nav">
   <tr>
+    <%# Previous %>
     <td> <%= link_to 'Prev', article_path(@article.previous_article) %> </td>
-    <td> <%= link_to 'Edit', edit_article_path(@article) %> </td>
+    <%# Edit %>
+    <% if user_signed_in? && @article.can_user_edit?(current_user) %>
+      <td> <%= link_to 'Edit', edit_article_path(@article) %> </td>
+    <% end %>
+    <%# Article Index %>
     <td> <%= link_to 'More', articles_path %> </td>
-    <td> <%= link_to 'Delete', article_path(@article), method: :delete,
-            data: { confirm: 'Are you sure?' } %> </td>
+    <%# Delete %>
+    <% if user_signed_in? && @article.can_user_delete?(current_user) %>
+      <td> <%= link_to 'Delete', article_path(@article), method: :delete,
+      data: { confirm: 'Are you sure?' } %> </td>
+    <% end %>
+    <%# Next %>
     <td> <%= link_to 'Next', article_path(@article.next_article) %> </td>
   </tr>
 </table>
