@@ -26,4 +26,15 @@ class Article < ApplicationRecord
       return self
     end
   end
+
+  # Article permission policies
+  def self.can_user_create?(user)
+    return user.poster?
+  end
+  def can_user_edit?(user)
+    return user == author || user.admin?
+  end
+  def can_user_delete?(user)
+    return user == author || user.poster? || user.admin?
+  end
 end
