@@ -15,7 +15,7 @@
     </time>
     <%# Option buttons %>
     <span class="comment-options">
-      <% if comment.can_user_delete?(current_user) %>
+      <% if user_signed_in? && comment.can_user_delete?(current_user) %>
         <%= link_to 'Delete', [comment.article, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
       <%= link_to 'Link', article_comment_path(comment.article, comment) %>
