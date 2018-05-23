@@ -51,6 +51,7 @@ group :development, :test do
   # Test framework
   gem 'rspec-rails', '~> 3.7'
   gem 'factory_bot_rails', '~> 4.0'
+  gem 'shoulda', '~> 3.5'
 end
 
 group :development do
