@@ -85,7 +85,7 @@ class ArticlesController < ApplicationController
   private
     # Reuseable: List of parameters that exist in the articles database.
     def article_params
-      params.require(:article).permit(:title, :text)
+      params.require(:article).permit(:title, :body)
     end
 
 end
