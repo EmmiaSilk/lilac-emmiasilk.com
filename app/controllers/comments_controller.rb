@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
   def create
     @article = Article.find(params[:article_id])
     authenticate_user!
-    if @article.can_user_add_comment?
+    if @article.can_user_add_comment?(current_user)
       @comment = @article.comments.create(comment_params)
       @comment.author = current_user
       @comment.save
