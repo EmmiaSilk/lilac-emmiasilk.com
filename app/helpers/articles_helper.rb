@@ -6,6 +6,7 @@ module ArticlesHelper
     link_attributes: { rel: 'nofollow', target: '_blank'},
     space_after_header: true,
     fenced_code_blocks: true,
+    safe_links_only: true, # Prevents XSS attacks
   }
   @@redcarpet_extensions = {
     autolink: true,
@@ -17,14 +18,14 @@ module ArticlesHelper
   }
 
   def markdown(text, header_level: 1, allow_headers: false)
-    render_options = {
+    options = @@redcarpet_options.merge({
       header_level: header_level, # The article name header is #h1
       allow_headers: allow_headers,
-    }
-    extensions = @@redcarpet_extensions
+    })
+    extensions = @@redcarpet_extensions.merge({})
 
-    renderer = LilacRender.new(@@redcarpet_options.merge(render_options) )
-    markdown = Redcarpet::Markdown.new(renderer, @@redcarpet_extensions)
+    renderer = LilacRender.new(options)
+    markdown = Redcarpet::Markdown.new(renderer, extensions)
 
     markdown.render(text).html_safe()
   end
