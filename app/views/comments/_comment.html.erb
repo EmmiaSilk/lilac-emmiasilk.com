@@ -15,6 +15,10 @@
     </time>
     <%# Option buttons %>
     <span class="comment-options">
+      <% if user_signed_in? && comment.can_user_edit?(current_user) %>
+        <%= link_to 'Edit', 'javascript:;', name: 'edit', role: 'button',
+          class: 'link' %>
+      <% end %>
       <% if user_signed_in? && comment.can_user_delete?(current_user) %>
         <%= link_to 'Delete', [comment.article, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
@@ -22,7 +26,11 @@
     </span>
   </p>
   <%# Comment body %>
-  <p>
+  <div class="comment-body">
     <%= markdown(comment.body, header_level: 3) %>
-  </p>
+  </div>
+  <%# Edit Comment box %>
+  <% if user_signed_in? && comment.can_user_edit?(current_user) %>
+    <%= render partial: "comments/edit", locals: {comment: comment}  %>
+  <% end %>
 </div>
