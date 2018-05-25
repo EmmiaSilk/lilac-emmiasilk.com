@@ -8,3 +8,19 @@
     border-bottom: 1px solid $color-decor-1;
   }
 }
+
+.article-index {
+  width: auto;
+  @extend .text-center;
+
+  table {
+    @extend .mx-auto;
+    width: auto;
+  }
+  th {
+    @extend .p-1;
+  }
+  a {
+
+  }
+}
