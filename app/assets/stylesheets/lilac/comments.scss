@@ -14,7 +14,7 @@
     border-bottom-width: 1px;
   }
   // Each child object
-  &>.tagline, &>.comment-body, &>.comment-edit-form {
+  &>.tagline, &>.comment-body, &>.comment-form {
     @extend .px-1;
   }
   // Tagline
@@ -37,12 +37,22 @@
       margin-top: 0
     }
   }
-  // Edit form
-  .comment-edit-form {
-    @extend .py-1;
-    textarea {
-      width: 100%;
-      min-height: 3em;
-    }
+}
+
+// Edit form
+.comment-form {
+  @extend .py-1;
+  textarea {
+    width: 100%;
+    min-height: 3em;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  button {
+    @extend .btn;
+    // @extend .btn-outline-secondary;
+    @extend .btn-sm;
+    border: 1px solid $color-decor-1;
   }
 }
