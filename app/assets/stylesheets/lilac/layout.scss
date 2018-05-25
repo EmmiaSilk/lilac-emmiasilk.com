@@ -62,8 +62,11 @@ footer {
 
 // Main content container
 #content {
-  max-width: 40em;
+  max-width: 45em;
   margin: auto;
+  $xpad: 1.5em;
+  padding-left: $xpad;
+  padding-right: $xpad;
   padding-top: 2em;
   padding-bottom: 1em;
   h1 {
