@@ -1,8 +1,8 @@
 <!-- Blog post -->
 <article>
-  <h1><%= @article.title %></h1>
+  <h2><%= @article.title %></h2>
   <p>
-    <%= markdown(@article.body, header_level: 2, allow_headers: true) %>
+    <%= markdown(@article.body, header_level: 3, allow_headers: true) %>
   </p>
 </article>
 
