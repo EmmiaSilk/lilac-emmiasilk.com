@@ -21,7 +21,7 @@
 
 <!-- Fields for adding comments -->
 <% if user_signed_in? && @article.can_user_add_comment?(current_user) %>
-  <%= render 'comments/form' %>
+  <%= render partial: 'comments/new' %>
 <% else %>
   <p class="text-center">
     <%= link_to('Log in', new_user_session_path)  %>

@@ -1,0 +1,13 @@
+<div class="comment-form" style="display: none">
+  <%= form_for([@article, comment],
+    url: article_comment_path(comment.article, comment), remote: true) do |form| %>
+    <%= hidden_field_tag :id  %>
+    <p style="margin-bottom: 0px">
+      <%= form.text_area :body %>
+    </p>
+    <div class="button-container">
+      <%= button_tag 'Save', type: 'button', name: 'submit' %>
+      <%= button_tag 'Cancel', type: 'button', name: 'cancel' %>
+    </div>
+  <% end %>
+</div>
