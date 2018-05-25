@@ -1,3 +1,6 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Sunflower');
+
 // Color theme
 @import "defaults/color-defaults";
 @import "themes/lilac";
@@ -39,10 +42,8 @@ label {
   color: darkred;
 }
 
-
-textarea {
-  //width: 100%;
-  //min-height: 6em;
+body {
+  font-family: "Sunflower", sans-serif;
 }
 
 .alert:empty {
