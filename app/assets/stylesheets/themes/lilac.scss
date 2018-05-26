@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Sunflower:300,700');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+
+/// Site colors
 // Layout
 $color-primary-1: thistle;
 // Shadows
@@ -9,5 +14,11 @@ $color-decor-2: $gray-600;
 $color-pond-1: #99a0f5;
 $color-pond-2: #2b327e;
 
-$hr-border-color: rgba($black, .1);
+//// Bootstrap overrides
+
+// Typography
+$font-family-sans-serif: "Sunflower", sans-serif;
+$font-family-monospace: "Ubuntu Mono", Consolas, "Courier New", monospace;
+$headings-font-family: "Lato", sans-serif;
+// HR
 $hr-border-color: $color-decor-1;
