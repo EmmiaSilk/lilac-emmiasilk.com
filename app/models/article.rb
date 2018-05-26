@@ -2,7 +2,7 @@ class Article < ApplicationRecord
   belongs_to :author, class_name: "User"
   has_many :comments, dependent: :destroy
 
-  validates_presence_of :title, length: {minimum: 5}
+  validates :title, presence: true, length: {minimum: 5}
   validates_presence_of :body
   validates_presence_of :author_id
 

@@ -1,9 +1,10 @@
-<%= form_with(model: @article, local: true) do |form| %>
+<%= form_with(model: @article, local: true, class: 'article-form') do |form| %>
+  <h1> <%= t(controller_name+'.'+action_name+'.header') %> </h1>
 
   <% if @article.errors.any? %>
     <div id="error-explanation">
       <p>
-        <%= pluralize(@article.errors.count, "error") %> prohibited this
+        <%= pluralize(@article.errors.count, "error") %> prevented this
         article from being saved:
       </p>
       <ul>

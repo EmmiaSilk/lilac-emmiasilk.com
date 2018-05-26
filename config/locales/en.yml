@@ -34,3 +34,10 @@ en:
     attributes:
       user:
         login: "Username or Email"
+  articles:
+    edit:
+      header: "Edit Article"
+    new:
+      header: "New Article"
+    form:
+      header: "Header1"

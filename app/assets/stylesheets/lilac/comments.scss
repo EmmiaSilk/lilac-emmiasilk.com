@@ -19,8 +19,10 @@
   }
   // Tagline
   &>.tagline {
+    position: relative;
     background-color: $color-decor-1;
     margin: 0;
+    @extend .container-fluid;
     .commenter-name {
       font-weight: bold;
     }
