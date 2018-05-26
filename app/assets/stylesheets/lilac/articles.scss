@@ -30,4 +30,8 @@
     @extend .text-center;
     @extend .mx-auto;
   }
+  textarea {
+    width: 100%;
+    min-height: 8em;
+  }
 }

@@ -35,8 +35,15 @@
 label {
   font-weight: bold;
 }
-.field_with_errors {
-  color: darkred;
+div.field_with_errors {
+  // Fixes a problem where the div breaks formatting
+  display: inline;
+  label::first-line {
+    background-color: rgba($danger, 0.25);
+  }
+  label::after {
+    content: '*'
+  }
 }
 
 .alert:empty {
