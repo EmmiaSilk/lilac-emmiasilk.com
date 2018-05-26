@@ -24,3 +24,10 @@
 
   }
 }
+
+.article-form {
+  h1 {
+    @extend .text-center;
+    @extend .mx-auto;
+  }
+}
