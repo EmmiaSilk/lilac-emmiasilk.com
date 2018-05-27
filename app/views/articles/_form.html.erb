@@ -30,7 +30,7 @@
   <script>
     // Replace textarea with ckeditor
     CKEDITOR.replace('article_body', {
-      customConfig: '/js/ckeditor/config.js',
+      customConfig: "<%= asset_pack_path 'ckeditor.js' %>",
       contentsCss: "<%= asset_pack_path 'application.css' %>",
     });
   </script>
