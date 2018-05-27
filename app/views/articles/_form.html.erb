@@ -1,3 +1,9 @@
+<% content_for :scripts do %>
+  <!-- WYSIWYG editor for articles -->
+  <%= javascript_include_tag Ckeditor.cdn_url %>
+<% end %>
+
+<!-- Edit article form -->
 <%= form_with(model: @article, local: true, class: 'article-form') do |form| %>
   <h1> <%= t(controller_name+'.'+action_name+'.header') %> </h1>
 
@@ -20,10 +26,14 @@
     <%= form.text_field :title %>
   </p>
 
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
+  <%= form.text_area :body %>
+  <script>
+    // Replace textarea with ckeditor
+    CKEDITOR.replace('article_body', {
+      customConfig: "<%= asset_pack_path 'ckeditor.js' %>",
+      contentsCss: "<%= asset_pack_path 'application.css' %>",
+    });
+  </script>
 
   <p>
     <%= form.submit %>

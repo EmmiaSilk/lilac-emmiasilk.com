@@ -9,15 +9,14 @@
 
     <!-- JQuery 3 -->
     <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js' %>
-
     <!-- Scripts required for Rails to run -->
     <%= javascript_pack_tag 'vendor', 'data-turbolinks-track': 'reload' %>
-
     <!-- Application js -->
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
     <!-- Application Style -->
     <%= stylesheet_pack_tag 'application', media: "all", 'data-turbolinks-track': 'reload' %>
+
+    <%= yield :scripts %>
   </head>
 
   <body>

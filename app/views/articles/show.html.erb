@@ -2,7 +2,7 @@
 <article>
   <h2><%= @article.title %></h2>
   <p>
-    <%= markdown(@article.body, header_level: 3, allow_headers: true) %>
+    <%= sanitize @article.body %>
   </p>
 </article>
 
