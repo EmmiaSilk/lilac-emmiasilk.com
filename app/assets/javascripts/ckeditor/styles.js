@@ -1,4 +1,4 @@
-CKEDITOR.stylesSet.add( 'default', [
+CKEDITOR.stylesSet.add( 'article', [
 	/* Block styles */
 
 	// These styles are already available in the "Format" drop-down list ("format" plugin),
