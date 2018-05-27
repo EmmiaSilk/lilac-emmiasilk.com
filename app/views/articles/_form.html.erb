@@ -1,3 +1,7 @@
+<!-- CKEditor prerequisite -->
+<script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+
+<!-- Edit article form -->
 <%= form_with(model: @article, local: true, class: 'article-form') do |form| %>
   <h1> <%= t(controller_name+'.'+action_name+'.header') %> </h1>
 
@@ -20,10 +24,7 @@
     <%= form.text_field :title %>
   </p>
 
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
+  <%= form.cktext_area :body %>
 
   <p>
     <%= form.submit %>
