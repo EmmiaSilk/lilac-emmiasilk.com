@@ -17,16 +17,10 @@ CKEDITOR.stylesSet.add( 'article', [
 	*/
 
 	{ name: 'Italic Title',		element: 'h2', styles: { 'font-style': 'italic' } },
-	{ name: 'Subtitle',			element: 'h5', styles: { 'color': '#aaa', 'font-style': 'italic' } },
-	{
-		name: 'Special Container',
-		element: 'div',
-		styles: {
-			padding: '5px 10px',
-			background: '#eee',
-			border: '1px solid #ccc'
-		}
-	},
+	{ name: 'Subtitle',			element: 'h3', styles: { 'color': '#aaa', 'font-style': 'italic' } },
+	{ name: 'Container', element: 'div', attributes: { 'class': 'container container-default' } },
+	{ name: 'Fluid Container', element: 'div', attributes: { 'class': 'container-fluid container-default' } },
+	{ name: 'Alert', element: 'div', attributes: { 'class': 'alert alert-primary'} },
 
 	/* Inline styles */
 
@@ -42,7 +36,7 @@ CKEDITOR.stylesSet.add( 'article', [
 	{ name: 'Superscript',		element: 'sup' },
 	*/
 
-	{ name: 'Marker',			element: 'span', attributes: { 'class': 'marker' } },
+	{ name: 'Marker',			element: 'mark' },
 
 	{ name: 'Big',				element: 'big' },
 	{ name: 'Small',			element: 'small' },
@@ -52,8 +46,6 @@ CKEDITOR.stylesSet.add( 'article', [
 	{ name: 'Keyboard Phrase',	element: 'kbd' },
 	{ name: 'Sample Text',		element: 'samp' },
 	{ name: 'Variable',			element: 'var' },
-
-	{ name: 'Alert',			element: 'div', attributes: { 'class': 'alert alert-primary'} },
 
 	{ name: 'Deleted Text',		element: 'del' },
 	{ name: 'Inserted Text',	element: 'ins' },
