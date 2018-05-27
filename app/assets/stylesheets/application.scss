@@ -49,3 +49,7 @@ div.field_with_errors {
 .alert:empty {
   display: none;
 }
+
+.cke_editable {
+  @extend .p-1;
+}

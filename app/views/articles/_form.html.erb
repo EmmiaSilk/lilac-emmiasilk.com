@@ -1,6 +1,3 @@
-<!-- CKEditor prerequisite -->
-<script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
-
 <!-- Edit article form -->
 <%= form_with(model: @article, local: true, class: 'article-form') do |form| %>
   <h1> <%= t(controller_name+'.'+action_name+'.header') %> </h1>
@@ -24,7 +21,14 @@
     <%= form.text_field :title %>
   </p>
 
-  <%= form.cktext_area :body %>
+  <%= form.text_area :body %>
+  <script>
+    // Replace textarea with ckeditor
+    CKEDITOR.replace('article_body', {
+      customConfig: '/js/ckeditor/config.js',
+      contentsCss: "<%= asset_pack_path 'application.css' %>",
+    });
+  </script>
 
   <p>
     <%= form.submit %>
