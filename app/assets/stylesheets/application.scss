@@ -58,8 +58,7 @@ div.field_with_errors {
 
 /* Useful for indicating the size and position of a container */
 .container-default {
-  @extend .bg-light;
-  @extend .border;
-  @extend .border-secondary;
-  @extend .rounded;
+  background-color: $light;
+  border: $border-width solid $secondary;
+  border-radius: $border-radius;
 }
