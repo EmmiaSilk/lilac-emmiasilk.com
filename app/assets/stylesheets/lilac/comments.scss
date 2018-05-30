@@ -15,14 +15,15 @@
   }
   // Each child object
   &>.tagline, &>.comment-body, &>.comment-form {
-    @extend .px-1;
+    padding-left: spacer(1);
+    padding-right: spacer(1);
   }
   // Tagline
   &>.tagline {
     position: relative;
     background-color: $color-decor-1;
     margin: 0;
-    @extend .container-fluid;
+    @include make-container;
     .commenter-name {
       font-weight: bold;
     }
@@ -43,7 +44,8 @@
 
 // Edit form
 .comment-form {
-  @extend .py-1;
+  padding-top: spacer(1);
+  padding-bottom: spacer(1);
   textarea {
     width: 100%;
     min-height: 3em;
@@ -52,9 +54,7 @@
     margin-bottom: 0;
   }
   button {
-    @extend .btn;
-    // @extend .btn-outline-secondary;
-    @extend .btn-sm;
-    border: 1px solid $color-decor-1;
+    border: $border-width solid $color-decor-1;
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
   }
 }

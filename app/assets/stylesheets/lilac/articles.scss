@@ -11,14 +11,15 @@
 
 .article-index {
   width: auto;
-  @extend .text-center;
+  text-align: center;
 
   table {
-    @extend .mx-auto;
+    margin-left: auto;
+    margin-right: auto;
     width: auto;
   }
   th {
-    @extend .p-1;
+    padding: spacer(1);
   }
   a {
 
@@ -27,8 +28,9 @@
 
 .article-form {
   h1 {
-    @extend .text-center;
-    @extend .mx-auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   textarea {
     width: 100%;

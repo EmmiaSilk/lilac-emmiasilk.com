@@ -7,22 +7,23 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-// Optional features
+// Bootstrap styles
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
 
+// Bootstrap components
 @import "~bootstrap/scss/alert";
-@import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/close";
 @import "~bootstrap/scss/code";
 @import "~bootstrap/scss/forms";
-@import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/images";
 @import "~bootstrap/scss/tables";
 @import "~bootstrap/scss/type";
-@import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/custom-forms";
 @import "~bootstrap/scss/button-group";
+
+// Utilities
+@import "utility/accessors";
 
 // App styles
 @import "lilac/elements";
@@ -51,13 +52,12 @@ div.field_with_errors {
 }
 
 .cke_editable {
-  @extend .p-1;
+  padding: spacer(1);
 }
 
 /* Useful for indicating the size and position of a container */
 .container-default {
-  @extend .bg-light;
-  @extend .border;
-  @extend .border-secondary;
-  @extend .rounded;
+  background-color: $light;
+  border: $border-width solid $secondary;
+  border-radius: $border-radius;
 }
