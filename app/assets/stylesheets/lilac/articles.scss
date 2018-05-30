@@ -11,7 +11,7 @@
 
 .article-index {
   width: auto;
-  @extend .text-center;
+  text-align: center;
 
   table {
     margin-left: auto;
@@ -28,7 +28,7 @@
 
 .article-form {
   h1 {
-    @extend .text-center;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
