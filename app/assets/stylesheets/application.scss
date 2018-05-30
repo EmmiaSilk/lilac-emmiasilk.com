@@ -7,6 +7,9 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
+// Utilities
+@import "utility/accessors";
+
 // Optional features
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
@@ -20,7 +23,6 @@
 @import "~bootstrap/scss/images";
 @import "~bootstrap/scss/tables";
 @import "~bootstrap/scss/type";
-@import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/custom-forms";
 @import "~bootstrap/scss/button-group";
 
@@ -51,7 +53,7 @@ div.field_with_errors {
 }
 
 .cke_editable {
-  @extend .p-1;
+  padding: spacer(1);
 }
 
 /* Useful for indicating the size and position of a container */

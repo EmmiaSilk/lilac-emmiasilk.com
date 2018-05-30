@@ -15,7 +15,8 @@
   }
   // Each child object
   &>.tagline, &>.comment-body, &>.comment-form {
-    @extend .px-1;
+    padding-left: spacer(1);
+    padding-right: spacer(1);
   }
   // Tagline
   &>.tagline {
@@ -43,7 +44,8 @@
 
 // Edit form
 .comment-form {
-  @extend .py-1;
+  padding-top: spacer(1);
+  padding-bottom: spacer(1);
   textarea {
     width: 100%;
     min-height: 3em;
