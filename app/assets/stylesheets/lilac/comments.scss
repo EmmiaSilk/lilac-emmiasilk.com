@@ -23,7 +23,7 @@
     position: relative;
     background-color: $color-decor-1;
     margin: 0;
-    @extend .container-fluid;
+    @include make-container;
     .commenter-name {
       font-weight: bold;
     }
@@ -54,9 +54,7 @@
     margin-bottom: 0;
   }
   button {
-    @extend .btn;
-    // @extend .btn-outline-secondary;
-    @extend .btn-sm;
-    border: 1px solid $color-decor-1;
+    border: $border-width solid $color-decor-1;
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
   }
 }

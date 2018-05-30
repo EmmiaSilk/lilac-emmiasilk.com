@@ -7,24 +7,23 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-// Utilities
-@import "utility/accessors";
-
-// Optional features
+// Bootstrap styles
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
 
+// Bootstrap components
 @import "~bootstrap/scss/alert";
-@import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/close";
 @import "~bootstrap/scss/code";
 @import "~bootstrap/scss/forms";
-@import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/images";
 @import "~bootstrap/scss/tables";
 @import "~bootstrap/scss/type";
 @import "~bootstrap/scss/custom-forms";
 @import "~bootstrap/scss/button-group";
+
+// Utilities
+@import "utility/accessors";
 
 // App styles
 @import "lilac/elements";
