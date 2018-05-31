@@ -4,7 +4,7 @@
 <% end %>
 
 <!-- Edit article form -->
-<%= form_with(model: @article, local: true, class: 'article-form') do |form| %>
+<%= form_with(model: @article, local: true, class: 'Article__form') do |form| %>
   <h1> <%= t(controller_name+'.'+action_name+'.header') %> </h1>
 
   <% if @article.errors.any? %>
