@@ -1,10 +1,10 @@
 // Comments list container
-#comments {
+.comments__list {
   margin-bottom: 1em;
 }
 
 // Individual user comments
-.user-comment {
+.comment {
   $inner-padding: 0.5px;
   // Container
   border: 0px solid $color-decor-2;
@@ -13,37 +13,36 @@
   &:last-child {
     border-bottom-width: 1px;
   }
-  // Each child object
-  &>.tagline, &>.comment-body, &>.comment-form {
-    padding-left: spacer(1);
-    padding-right: spacer(1);
+}
+// Each child object
+.comment__tagline, .comment__body, .comment__form {
+  padding-left: spacer(1);
+  padding-right: spacer(1);
+}
+// Tagline
+.comment__tagline {
+  position: relative;
+  background-color: $color-decor-1;
+  margin: 0;
+  .commenter-name {
+    font-weight: bold;
   }
-  // Tagline
-  &>.tagline {
-    position: relative;
-    background-color: $color-decor-1;
-    margin: 0;
-    @include make-container;
-    .commenter-name {
-      font-weight: bold;
-    }
-    .comment-options {
-      float: right;
-    }
+  .comment-options {
+    float: right;
   }
-  // User text
-  &>.comment-body {
-    p {
-      margin-bottom: 0;
-    }
-    p:first {
-      margin-top: 0
-    }
+}
+// User text
+.comment__body {
+  p {
+    margin-bottom: 0;
+  }
+  p:first {
+    margin-top: 0
   }
 }
 
 // Edit form
-.comment-form {
+.comment__form {
   padding-top: spacer(1);
   padding-bottom: spacer(1);
   textarea {

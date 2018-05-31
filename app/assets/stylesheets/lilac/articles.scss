@@ -1,5 +1,5 @@
 // Article navbar
-.article-nav {
+.article__nav {
   width: 10em;
   margin-left: auto;
   margin-right: auto;
@@ -9,7 +9,8 @@
   }
 }
 
-.article-index {
+// List of articles
+.article__list {
   width: auto;
   text-align: center;
 
@@ -26,7 +27,8 @@
   }
 }
 
-.article-form {
+// Article new/edit form
+.article__form {
   h1 {
     text-align: center;
     margin-left: auto;
@@ -37,3 +39,6 @@
     min-height: 8em;
   }
 }
+
+// List of comments
+.article__comments {}

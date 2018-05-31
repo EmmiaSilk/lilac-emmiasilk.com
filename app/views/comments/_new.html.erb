@@ -1,9 +1,9 @@
-<div class="comment-form">
+<div class="comment__form">
   <%= form_for([@article, @article.comments.build]) do |form| %>
     <p>
       <%= form.text_area :body %>
     </p>
-    <div class="button-container">
+    <div class="comment__form-buttons">
       <%= form.button "Submit" %>
     </div>
   <% end %>

@@ -1,7 +1,7 @@
 <%# Comment renderer %>
-<div class="user-comment" id="<%= anchor_id(comment) %>">
+<div class="comment js-comment" id="<%= anchor_id(comment) %>">
   <%# Tagline %>
-  <p class="tagline">
+  <p class="comment__tagline">
     <%# Commenter name %>
     <span class="commenter-name">
       <%= comment.author.username %>
@@ -26,7 +26,7 @@
     </span>
   </p>
   <%# Comment body %>
-  <div class="comment-body">
+  <div class="comment__body js-comment-body">
     <%= markdown(comment.body, header_level: 3) %>
   </div>
   <%# Edit Comment box %>
