@@ -1,5 +1,5 @@
 <!-- Blog post -->
-<article class="Article__body">
+<article class="article__body">
   <h2><%= @article.title %></h2>
   <p>
     <%= sanitize @article.body %>
@@ -11,7 +11,7 @@
 <hr>
 
 <!-- User comments list -->
-<div class="Article__comments Comments__list">
+<div class="article__comments comments__list">
   <h2>Comments</h2>
   <% @article.comments.each do |comment| %>
     <%= render partial: 'comments/comment', object: comment %>

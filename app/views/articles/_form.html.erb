@@ -4,7 +4,7 @@
 <% end %>
 
 <!-- Edit article form -->
-<%= form_with(model: @article, local: true, class: 'Article__form') do |form| %>
+<%= form_with(model: @article, local: true, class: 'article__form') do |form| %>
   <h1> <%= t(controller_name+'.'+action_name+'.header') %> </h1>
 
   <% if @article.errors.any? %>
@@ -26,10 +26,10 @@
     <%= form.text_field :title %>
   </p>
 
-  <%= form.text_area :body %>
+  <%= form.text_area :body, id: 'plaintext-editor' %>
   <script>
     // Replace textarea with ckeditor
-    CKEDITOR.replace('article_body', {
+    CKEDITOR.replace('plaintext-editor', {
       customConfig: "<%= asset_pack_path 'ckeditor.js' %>",
       contentsCss: "<%= asset_pack_path 'application.css' %>",
     });
