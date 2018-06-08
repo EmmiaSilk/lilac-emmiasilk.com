@@ -3,7 +3,7 @@
   <%# Tagline %>
   <p class="comment__tagline">
     <%# Commenter name %>
-    <span class="commenter-name">
+    <span class="comment__author">
       <%= comment.author.username %>
     </span>
     posted
@@ -14,7 +14,7 @@
       <%= time_ago_in_words(comment.created_at) %> ago
     </time>
     <%# Option buttons %>
-    <span class="comment-options">
+    <span class="comment__options">
       <% if user_signed_in? && comment.can_user_edit?(current_user) %>
         <%= link_to 'Edit', 'javascript:;', name: 'edit', role: 'button',
           class: 'link' %>

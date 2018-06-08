@@ -24,12 +24,12 @@
   position: relative;
   background-color: $color-decor-1;
   margin: 0;
-  .commenter-name {
-    font-weight: bold;
-  }
-  .comment-options {
-    float: right;
-  }
+}
+.comment__author {
+  font-weight: bold;
+}
+.comment__options {
+  float: right;
 }
 // User text
 .comment__body {
