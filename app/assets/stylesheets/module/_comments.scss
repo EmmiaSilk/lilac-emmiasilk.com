@@ -2,6 +2,8 @@
 //
 // Contains styles relating to user comments.
 
+$comment-div-px: spacer(1);
+
 /* Container for comments */
 .comments__list {
   margin-bottom: 1em;
@@ -11,8 +13,7 @@
 .comment {
   $inner-padding: 0.5px;
   // Container
-  border: 0px solid $color-decor-2;
-  border-width: 1px;
+  border: 1px solid $color-decor-2;
   border-bottom-width: 0px;
   &:last-child {
     border-bottom-width: 1px;
@@ -21,8 +22,8 @@
 
 /* Information tagline */
 .comment__tagline {
-  padding-left: spacer(1);
-  padding-right: spacer(1);
+  padding-left: $comment-div-px;
+  padding-right: $comment-div-px;
   position: relative;
   background-color: $color-decor-1;
   margin: 0;
@@ -35,8 +36,8 @@
 }
 /* User text */
 .comment__body {
-  padding-left: spacer(1);
-  padding-right: spacer(1);
+  padding-left: $comment-div-px;
+  padding-right: $comment-div-px;
   p {
     margin-bottom: 0;
   }
@@ -47,8 +48,8 @@
 
 /* Form for editing comments */
 .comment__form {
-  padding-top: spacer(1);
-  padding-bottom: spacer(1);
+  padding-top: $comment-div-px;
+  padding-bottom: $comment-div-px;
   textarea {
     width: 100%;
     min-height: 3em;

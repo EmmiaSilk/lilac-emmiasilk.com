@@ -42,10 +42,6 @@ div.field_with_errors {
   }
 }
 
-.alert:empty {
-  display: none;
-}
-
 .cke_editable {
   padding: spacer(1);
 }
@@ -55,4 +51,5 @@ div.field_with_errors {
   background-color: $light;
   border: $border-width solid $secondary;
   border-radius: $border-radius;
+  padding: spacer(1);
 }
