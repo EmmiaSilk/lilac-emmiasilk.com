@@ -1,16 +1,14 @@
 // Color theme
-@import "defaults/color-defaults";
-@import "themes/lilac";
+@import "theme/color-defaults";
+@import "theme/lilac";
 
 // Bootstrap core
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
-
 // Bootstrap styles
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
-
 // Bootstrap components
 @import "~bootstrap/scss/alert";
 @import "~bootstrap/scss/close";
@@ -26,11 +24,11 @@
 @import "utility/accessors";
 
 // App styles
-@import "lilac/elements";
-@import "lilac/layout";
-@import "lilac/articles";
-@import "lilac/comments";
-@import "lilac/welcome";
+@import "layout/layout";
+// Modules for views
+@import "module/articles";
+@import "module/comments";
+@import "module/elements";
 
 
 div.field_with_errors {
