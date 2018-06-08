@@ -1,4 +1,8 @@
-// Article navbar
+// Articles module
+//
+// Contains styles for blog posts.
+
+/* Article navigation bar */
 .article__nav {
   width: 10em;
   margin-left: auto;
@@ -9,7 +13,7 @@
   }
 }
 
-// List of articles
+/* Article index table */
 .article__list {
   width: auto;
   text-align: center;
@@ -27,7 +31,7 @@
   }
 }
 
-// Article new/edit form
+/* Form for editing articles */
 .article__form {
   h1 {
     text-align: center;
@@ -40,5 +44,5 @@
   }
 }
 
-// List of comments
+/* Comments container under an article (see Comments.) */
 .article__comments {}

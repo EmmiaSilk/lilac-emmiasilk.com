@@ -1,9 +1,13 @@
-// Comments list container
+// Comments module
+//
+// Contains styles relating to user comments.
+
+/* Container for comments */
 .comments__list {
   margin-bottom: 1em;
 }
 
-// Individual user comments
+/* Individual user comments */
 .comment {
   $inner-padding: 0.5px;
   // Container
@@ -14,13 +18,11 @@
     border-bottom-width: 1px;
   }
 }
-// Each child object
-.comment__tagline, .comment__body, .comment__form {
+
+/* Information tagline */
+.comment__tagline {
   padding-left: spacer(1);
   padding-right: spacer(1);
-}
-// Tagline
-.comment__tagline {
   position: relative;
   background-color: $color-decor-1;
   margin: 0;
@@ -31,8 +33,10 @@
 .comment__options {
   float: right;
 }
-// User text
+/* User text */
 .comment__body {
+  padding-left: spacer(1);
+  padding-right: spacer(1);
   p {
     margin-bottom: 0;
   }
@@ -41,7 +45,7 @@
   }
 }
 
-// Edit form
+/* Form for editing comments */
 .comment__form {
   padding-top: spacer(1);
   padding-bottom: spacer(1);
