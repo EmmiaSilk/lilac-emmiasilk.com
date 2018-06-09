@@ -1,0 +1,22 @@
+// Navigation bar
+//
+// Stylings for navigation bars
+
+/** Navigational bar */
+.navbar {
+
+}
+
+/** A given set of items */
+.navbar__nav {
+  display: flex;
+  flex-direction: row;
+  // Reset some list values
+  list-style: none;
+  padding-left: 0px;
+}
+
+/** Each item in the navigation bar */
+.navbar__item {
+  padding: spacer(2);
+}
