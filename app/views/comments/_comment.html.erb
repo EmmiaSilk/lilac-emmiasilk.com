@@ -1,9 +1,9 @@
 <%# Comment renderer %>
-<div class="user-comment" id="<%= anchor_id(comment) %>">
+<div class="comment js-comment" id="<%= anchor_id(comment) %>">
   <%# Tagline %>
-  <p class="tagline">
+  <p class="comment__tagline">
     <%# Commenter name %>
-    <span class="commenter-name">
+    <span class="comment__author">
       <%= comment.author.username %>
     </span>
     posted
@@ -14,7 +14,7 @@
       <%= time_ago_in_words(comment.created_at) %> ago
     </time>
     <%# Option buttons %>
-    <span class="comment-options">
+    <span class="comment__options">
       <% if user_signed_in? && comment.can_user_edit?(current_user) %>
         <%= link_to 'Edit', 'javascript:;', name: 'edit', role: 'button',
           class: 'link' %>
@@ -26,7 +26,7 @@
     </span>
   </p>
   <%# Comment body %>
-  <div class="comment-body">
+  <div class="comment__body js-comment-body">
     <%= markdown(comment.body, header_level: 3) %>
   </div>
   <%# Edit Comment box %>

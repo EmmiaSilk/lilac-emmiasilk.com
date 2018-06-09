@@ -1,23 +1,27 @@
 # Comment helper methods
 window.Comments = {
   showEditPane: (comment) ->
-    editPane = $(comment).find(".comment-form")
-    commentBody = $(comment).find(".comment-body")
+    editPane = $(comment).find(".js-comment-form")
+    commentBody = $(comment).find(".js-comment-body")
     if editPane != null
       editPane.show()
       commentBody.hide()
 
   hideEditPane: (comment) ->
-    editPane = $(comment).find(".comment-form")
-    commentBody = $(comment).find(".comment-body")
+    editPane = $(comment).find(".js-comment-form")
+    commentBody = $(comment).find(".js-comment-body")
     if editPane != null
       editPane.hide()
       commentBody.show()
 
   replaceBodyContent: (comment, contents) ->
-    commentBody = comment.find(".comment-body")
+    console.log("Replacing contents!")
+    commentBody = $(comment).find(".js-comment-body")
+    console.log(commentBody);
     commentBody.empty()
+    console.log(commentBody);
     commentBody.append(contents)
+    console.log(commentBody);
 
   saveChanges: (action, bodyText) ->
     # Request
@@ -46,21 +50,21 @@ handleAjaxError = (data, textStatus, jqXHR, message) ->
 
 # JQuery events
 $ ->
-  commentSelector = $(".user-comment")
+  commentSelector = $(".js-comment")
 
   ## Show editor
   commentSelector.find("a[name='edit']").click ->
-    parentComment = this.closest(".user-comment")
+    parentComment = this.closest(".js-comment")
     Comments.showEditPane(parentComment)
 
   ## Cancel
   commentSelector.find("button[name='cancel']").click ->
-    parentComment = this.closest(".user-comment")
+    parentComment = this.closest(".js-comment")
     Comments.hideEditPane(parentComment)
 
   ## Save edited comment
   commentSelector.find("button[name='submit']").click ->
     dataForm = this.closest("form")
     action = $(dataForm).attr('action')
-    bodyText = $(dataForm).find('#comment_body').val()
+    bodyText = $(dataForm).find("textarea[name='comment[body]']").val()
     Comments.saveChanges(action, bodyText)

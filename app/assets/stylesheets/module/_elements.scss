@@ -1,4 +1,6 @@
-// Place everything relating to individual elements here.
+// Elements module
+//
+// Contains stylings for specific elements.
 
 // Code blocks should preserve whitespace
 code, pre, kdb {
@@ -7,4 +9,8 @@ code, pre, kdb {
 // Fixes an issue in the markdown renderer where it adds extra <br> elements.
 code br, pre br, kbd br {
   display: none;
+}
+
+label {
+  font-weight: bold;
 }

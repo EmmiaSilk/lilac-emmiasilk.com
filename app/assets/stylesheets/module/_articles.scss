@@ -1,0 +1,49 @@
+// Articles module
+//
+// Contains styles for blog posts.
+
+/* Article navigation bar */
+.article__nav {
+  margin-left: auto;
+  margin-right: auto;
+  td {
+    width: 2em;
+    padding: spacer(2);
+    border-top: 1px solid $color-decor-1;
+    border-bottom: 1px solid $color-decor-1;
+  }
+}
+
+/* Article index table */
+.article__list {
+  width: auto;
+  text-align: center;
+
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
+  th {
+    padding: spacer(1);
+  }
+  a {
+
+  }
+}
+
+/* Form for editing articles */
+.article__form {
+  h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  textarea {
+    width: 100%;
+    min-height: 8em;
+  }
+}
+
+/* Comments container under an article (see Comments.) */
+.article__comments {}

@@ -1,0 +1,18 @@
+// Content section
+//
+// Provides styling for the container where most page content is stored.
+
+/* Main page content container */
+#content {
+  max-width: 45em;
+  margin: auto;
+  $xpad: 1.5em;
+  padding-left: $xpad;
+  padding-right: $xpad;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  h1, .h1 {
+    text-align: left;
+    border-bottom: 1px solid $color-decor-1;
+  }
+}

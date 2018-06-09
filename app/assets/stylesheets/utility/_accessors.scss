@@ -1,0 +1,6 @@
+/// This contains hashmap accessor functions. 
+
+/// Accessor function for the $spacers map in Bootstrap
+@function spacer($key) {
+  @return map-get($spacers, $key);
+}

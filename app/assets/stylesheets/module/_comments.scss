@@ -1,0 +1,64 @@
+// Comments module
+//
+// Contains styles relating to user comments.
+
+$comment-div-px: spacer(1);
+
+/* Container for comments */
+.comments__list {
+  margin-bottom: 1em;
+}
+
+/* Individual user comments */
+.comment {
+  $inner-padding: 0.5px;
+  // Container
+  border: 1px solid $color-decor-2;
+  border-bottom-width: 0px;
+  &:last-child {
+    border-bottom-width: 1px;
+  }
+}
+
+/* Information tagline */
+.comment__tagline {
+  padding-left: $comment-div-px;
+  padding-right: $comment-div-px;
+  position: relative;
+  background-color: $color-decor-1;
+  margin: 0;
+}
+.comment__author {
+  font-weight: bold;
+}
+.comment__options {
+  float: right;
+}
+/* User text */
+.comment__body {
+  padding-left: $comment-div-px;
+  padding-right: $comment-div-px;
+  p {
+    margin-bottom: 0;
+  }
+  p:first {
+    margin-top: 0
+  }
+}
+
+/* Form for editing comments */
+.comment__form {
+  padding-top: $comment-div-px;
+  padding-bottom: $comment-div-px;
+  textarea {
+    width: 100%;
+    min-height: 3em;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  button {
+    border: $border-width solid $color-decor-1;
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+  }
+}
