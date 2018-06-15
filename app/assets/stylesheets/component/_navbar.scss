@@ -4,7 +4,8 @@
 
 /** Navigational bar */
 .navbar {
-
+  display: flex;
+  flex-direction: column;
 }
 
 /** A given set of items */
@@ -19,4 +20,20 @@
 /** Each item in the navigation bar */
 .navbar__item {
   padding: spacer(2);
+}
+
+
+// Modifiers
+/* Narbar component */
+.navbar--style-end-of-content {
+  .navbar__nav {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .navbar__item {
+    min-width: 3em;
+    padding: spacer(2);
+    border-top: 1px solid $color-decor-1;
+    border-bottom: 1px solid $color-decor-1;
+  }
 }
