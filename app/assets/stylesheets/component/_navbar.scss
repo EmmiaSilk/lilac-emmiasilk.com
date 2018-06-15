@@ -12,9 +12,9 @@
 .navbar__nav {
   display: flex;
   flex-direction: row;
-  // Reset some list values
   list-style: none;
   padding-left: 0px;
+  margin-bottom: 0px;
 }
 
 /** Each item in the navigation bar */
