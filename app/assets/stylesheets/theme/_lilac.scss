@@ -4,7 +4,7 @@
 
 /// Site colors
 // Layout
-$color-primary-1: thistle;
+$color-primary-1: #d8bfd8;
 // Shadows
 $color-shadow-1: rgba($black, 0.5);
 // Decor
@@ -13,6 +13,10 @@ $color-decor-2: $gray-600;
 // Icon gradient
 $color-pond-1: #99a0f5;
 $color-pond-2: #2b327e;
+
+// Text colors //TODO: Set more appropriate colors
+$color-text-light: #fff4ff;
+$color-text-dark: #4f424f;
 
 //// Bootstrap overrides
 
